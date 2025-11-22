@@ -8,3 +8,14 @@ dependencies = [
     "pandas>=2.3.3",
     "requests>=2.32.5",
 ]
+
+[tool.ruff]
+line-length = 100
+lint.select = ['E', 'F', 'W', 'A', 'PLC', 'PLE', 'PLW', 'I', 'D']
+lint.ignore = [
+    'D100',
+    'D202',
+    'D211',
+    'D212',
+    'D401'
+]
