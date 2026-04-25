@@ -16,7 +16,8 @@ lint.ignore = [
     'D202',
     'D211',
     'D212',
-    'D401'
+    'D401',
+    'D203'
 ]
 
 [dependency-groups]
