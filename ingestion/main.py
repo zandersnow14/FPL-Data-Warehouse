@@ -1,4 +1,3 @@
-
 import datetime
 
 from src.extract import get_bootstrap_data, get_fixture_data
@@ -15,7 +14,7 @@ def main():
     ingested_at = datetime.datetime.now(datetime.UTC)
 
     bootstrap_data = get_bootstrap_data()
-    fixture_data = get_fixture_data() 
+    fixture_data = get_fixture_data()
 
     load_bronze_table("players", bootstrap_data['players'], ingested_at)
     load_bronze_table("gameweeks", bootstrap_data['gameweeks'], ingested_at)

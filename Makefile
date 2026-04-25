@@ -1,4 +1,4 @@
-.PHONY: ingest extract
+.PHONY: ingest extract verify lint
 
 ingest:
 	uv run python ingestion/main.py
@@ -8,3 +8,9 @@ extract:
 
 verify:
 	uv run python scripts/verify_bronze.py
+
+lint:
+	uv run ruff check .
+
+lint-format:
+	uv run ruff format --check .

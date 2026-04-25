@@ -1,6 +1,4 @@
-
 import requests
-
 
 BASE_URL = "https://fantasy.premierleague.com/api"
 BOOTSTRAP_URL = f"{BASE_URL}/bootstrap-static"
@@ -26,13 +24,18 @@ def get_bootstrap_data() -> dict:
 
 
 def get_fixture_data():
-    
+    """
+    Retrieves fixture data from the FPL API.
+
+    :returns: None
+    """
+
     res = requests.get(FIXTURE_URL)
     res.raise_for_status()
     return res.json()
 
 
 if __name__ == "__main__":
-    
+
     bootstrap_data = get_bootstrap_data()
     fixture_data = get_fixture_data()
