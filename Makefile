@@ -14,3 +14,6 @@ lint:
 
 lint-format:
 	uv run ruff format --check .
+
+inspect-bronze:
+	uv run python scripts/inspect_bronze.py
