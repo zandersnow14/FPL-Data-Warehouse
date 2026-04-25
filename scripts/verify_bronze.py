@@ -1,6 +1,5 @@
 import duckdb
 
-
 conn = duckdb.connect("data/fpl_local.duckdb")
 
 tables = ["players", "teams", "gameweeks", "positions", "fixtures"]
