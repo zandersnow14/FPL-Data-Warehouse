@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: players
+      - name: teams
+      - name: fixtures
+      - name: positions
+      - name: gameweeks
