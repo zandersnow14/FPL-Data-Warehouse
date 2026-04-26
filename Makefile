@@ -17,3 +17,9 @@ lint-format:
 
 inspect-bronze:
 	uv run python scripts/inspect_bronze.py
+
+dbt-run:
+	cd dbt/fpl_dbt && uv run dbt run
+
+dbt-test:
+	cd dbt/fpl_dbt && uv run dbt test
