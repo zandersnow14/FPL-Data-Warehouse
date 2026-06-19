@@ -17,3 +17,41 @@ models:
         description: 3 letter abbreviation of team
         tests:
           - not_null
+
+  - name: stg_players
+    description: Staging model for Premier League players, extracted from bronze
+    columns:
+      - name: player_id
+        description: Primary key for the player
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: First name of player
+        tests:
+          - not_null
+      - name: second_name
+        description: Second name(s) of player
+        tests:
+          - not_null
+      - name: web_name
+        description: The name the player appears as on FPL
+        test:
+          - not_null
+      - name: team_id
+        description: The team ID of the player, linking to the teams table
+        test:
+          - not_null
+      - name: position_id
+        description: The position ID of the player, linking to the positions table
+        test:
+          - not_null
+      - name: price
+        description: The current price (in £ millions) of the player
+      - name: status
+        description: The current status of the player, written as a single letter#
+        test:
+          - not_null
+      - name: code
+        description: Alternate identifier for the player, independent of the season
+        test: not_null
