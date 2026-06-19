@@ -38,3 +38,12 @@ models:
     warehouse:
       +materialized: table
       +schema: fpl
+
+seeds:
+  fpl_dbt:
+    positions:
+      +schema: silver
+      +column_types:
+        position_id: int
+        position_name: varchar
+        position_name_short: varchar
