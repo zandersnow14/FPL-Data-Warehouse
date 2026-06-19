@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: positions
+    description: "Static reference data for FPL player positions"
+    columns:
+      - name: position_id
+        description: "FPL element type ID (1=GKP, 2=DEF, 3=MID, 4=FWD)"
+        tests:
+          - unique
+          - not_null
+      - name: position_name
+        description: "Full position name e.g. Goalkeeper"
+        tests:
+          - not_null
+      - name: position_name_short
+        description: "Short position code e.g. GKP"
+        tests:
+          - not_null
