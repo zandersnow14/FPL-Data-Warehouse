@@ -23,3 +23,6 @@ dbt-run:
 
 dbt-test:
 	cd dbt/fpl_dbt && uv run dbt test
+
+dbt-seed:
+	cd dbt/fpl_dbt && uv run dbt seed
